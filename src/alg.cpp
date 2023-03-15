@@ -20,9 +20,9 @@ int cbinsearch(int *arr, int size, int value) {
       }
       return sered;
     } else if (value < arr[sered]) {
-      right = sered - 1;
+      rigbord = sered - 1;
     } else {
-      left = sered + 1
+      lefbord = sered + 1;
     }
   }
   return schet;
