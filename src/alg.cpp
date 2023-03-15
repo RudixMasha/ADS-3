@@ -10,15 +10,16 @@ int cbinsearch(int *arr, int size, int value) {
     if (arr[sered] == value) {
       schet++;
       int ser = sered - 1;
-      while (arr[sered + 1] == value) {
-        schet++;
-        ser++;
-      }
-      while (arr[ser - 1] == value) {
+      while (ser >= lefbord && arr[ser] == value) {
         schet++;
         ser--;
       }
-      return sered;
+      ser = sered + 1;
+      while (ser <= rigbord && arr[ser] == value) {
+        schet++;
+        ser++;
+      }
+      break;
     } else if (value < arr[sered]) {
       rigbord = sered - 1;
     } else {
